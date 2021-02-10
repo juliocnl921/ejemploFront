@@ -18,6 +18,7 @@ function cargar_datos(){
         .then(response => response.json())
         .then(data =>{
             let lista = document.getElementById('lista');
+            lista.innerHTML = "";
             data.forEach(element => {
                 lista.innerHTML += '<div>'+element+'</div>';
             });
